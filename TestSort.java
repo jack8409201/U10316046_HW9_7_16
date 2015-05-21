@@ -20,6 +20,15 @@ public class TestSort {
 				}
 			}
 		}
+		for(int i = 0; i < m.length-1; i++){
+			for(int j = 0; j <= m.length-2; j++){
+				if(m[j][0] == m[j+1][0] && m[j][1] > m[j+1][1]){
+					int temp = m[j][1];
+					m[j][1] = m[j+1][1];
+					m[j+1][1] = temp;
+				}
+			}
+		}
 		
 		for (int i  = 0; i < m.length; i++){
 			System.out.println("{" + m[i][0] + "," + m[i][1] + "}");
